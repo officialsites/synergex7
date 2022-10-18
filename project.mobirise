@@ -1,0 +1,694 @@
+{
+  "settings": {
+    "name": "Site-07-16_1445",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise5",
+      "title": "Mobirise 5",
+      "styling": {
+        "primaryColor": "#1259da",
+        "secondaryColor": "#ff6666",
+        "successColor": "#40b0bf",
+        "infoColor": "#1259da",
+        "warningColor": "#FFE161",
+        "dangerColor": "#ff9966",
+        "mainFont": "Jost",
+        "display1Font": "Jost",
+        "display1Size": 4.6,
+        "display2Font": "Jost",
+        "display2Size": 3,
+        "display5Font": "Jost",
+        "display5Size": 2,
+        "display7Font": "Jost",
+        "display7Size": 1.2,
+        "display4Font": "Jost",
+        "display4Size": 1.1,
+        "isRoundedButtons": false,
+        "isGhostButtonBorder": false,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#1259da"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.6.8",
+    "siteFonts": [
+      {
+        "css": "'Jost', sans-serif",
+        "name": "Jost",
+        "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 20,
+    "versionPublish": "5.6.8",
+    "imageResize": true,
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Neuropure",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\">\n                    <b>Neuropure™</b>\n                </h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\">Order your <b>Neuropure™</b> on the Official Site Today &amp; Save Up To <b style=\"font-size: 1.2rem;\">$300</b><span style=\"font-size: 1.2rem;\">&nbsp;+ </span><b style=\"font-size: 1.2rem;\">Two Free&nbsp;Bonuses</b><span style=\"font-size: 1.2rem;\">!</span></h4>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tbM1Fu41cB",
+          "_anchor": "content4-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            "img": {
+              "width": "100%"
+            }
+          },
+          "_name": "image3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image3\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/neuro-pure-6-bottles-v.2c-768x768.png\" alt=\"Mobirise Website Builder\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        Image Description</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tbM276mcid",
+          "_anchor": "image3-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            "img": {
+              "width": "100%"
+            }
+          },
+          "_name": "image3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image3\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/coupon-50-1280x720.png\" alt=\"Mobirise Website Builder\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        Image Description</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tgR1LAcDZw",
+          "_anchor": "image3-a",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-7\">\n                    <a href=\"https://officialsites.github.io/vitalflow\" class=\"text-info text-primary\"><b>Get My Special Promotion On Official Website for Only $49 per Bottle!</b></a></h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                    You can arrange your articles with the Mobirise website design software.\n                </h4>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tgR2JVnHew",
+          "_anchor": "content4-b",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            "img": {
+              "width": "100%"
+            }
+          },
+          "_name": "image3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image3\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"7\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/logopro.webp\" alt=\"Mobirise Website Builder\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        Image Description</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tbM9deY0jG",
+          "_anchor": "image3-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            "img": {
+              "width": "100%"
+            }
+          },
+          "_name": "image3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image3\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"6\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/800e8796e82ee9bea5b13ee4f5b3cb8a.captura-de-tela-2022-05-12.webp\" alt=\"Mobirise Website Builder\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        Image Description</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tgR4fqx4IU",
+          "_anchor": "image3-c",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".social-row": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".media-container-row": {
+              "flex-direction": "column",
+              "justify-content": "center",
+              "align-items": "center",
+              ".foot-menu": {
+                "list-style": "none",
+                "display": "flex",
+                "justify-content": "center",
+                "flex-wrap": "wrap",
+                "padding": "0",
+                "margin-bottom": "0",
+                "li": {
+                  "padding": "0 1rem 1rem 1rem",
+                  "p": {
+                    "margin": "0"
+                  }
+                }
+              },
+              ".social-list": {
+                "width": "auto",
+                "padding-left": "0",
+                "margin-bottom": "0",
+                "list-style": "none",
+                "display": "flex",
+                "flex-wrap": "wrap",
+                "justify-content": "flex-end",
+                ".mbr-iconfont-social": {
+                  "font-size": "1.5rem",
+                  "color": "#ffffff"
+                },
+                ".soc-item": {
+                  "margin": "0 .5rem"
+                },
+                "a": {
+                  "margin": "0",
+                  "opacity": ".5",
+                  "transition": ".2s linear",
+                  "&:hover": {
+                    "opacity": "1"
+                  }
+                },
+                "@media (max-width: 767px)": {
+                  "-webkit-justify-content": "center",
+                  "justify-content": "center"
+                }
+              },
+              ".row-copirayt": {
+                "word-break": "break-word",
+                "width": "100%",
+                "p": {
+                  "width": "100%"
+                }
+              }
+            }
+          },
+          "_name": "footer3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"footer3\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#232323\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"row row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\"foot-menu-item\"><a href=\"page1.html\" class=\"text-white text-primary\">Privacy Policy</a></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"page2.html\" class=\"text-white text-primary\">Terms Of Use</a></li>\n                    \n                    \n                    \n                </ul>\n            </div>\n            <div class=\"row social-row\" mbr-if=\"socialItems > 0\">\n                <div mbr-list mbr-list-grow=\"socialItems\" class=\"social-list align-right pb-2\">\n                    <div class=\"soc-item\">\n                        <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    \n                    \n                    \n                    \n                    \n                </div>\n            </div>\n            <div class=\"row row-copirayt\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\">\n                    © Copyright 2022. All Rights Reserved.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "th8ruzxC3G",
+          "_anchor": "footer3-h",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "title": "Privacy Policy",
+        "order": 2
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".mbr-section-subtitle DIV": {
+              "text-align": "left"
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"7\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">\n                    <b>Privacy Policy</b></h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\"><div>Who we are\n</div><div>Our Website Address Is: https://officialsites.github.io/.\n</div><div>Comments\n</div><div>When Visitors Leave Comments On The Site We Collect The Data Shown In The Comments Form, And Also The Visitor’s IP Address And Browser User Agent String To Help Spam Detection.\n</div><div>An Anonymized String Created From Your Email Address (Also Called A Hash) May Be Provided To The Gravatar Service To See If You Are Using It. The Gravatar Service Privacy Policy Is Available Here: Https://Automattic.Com/Privacy/. After Approval Of Your Comment, Your Profile Picture Is Visible To The Public In The Context Of Your Comment.\n</div><div>Media\n</div><div>If You Upload Images To The Website, You Should Avoid Uploading Images With Embedded Location Data (EXIF GPS) Included. Visitors To The Website Can Download And Extract Any Location Data From Images On The Website.\n</div><div>Cookies\n</div><div>If You Leave A Comment On Our Site You May Opt-In To Saving Your Name, Email Address And Website In Cookies. These Are For Your Convenience So That You Do Not Have To Fill In Your Details Again When You Leave Another Comment. These Cookies Will Last For One Year.\n</div><div>If You Visit Our Login Page, We Will Set A Temporary Cookie To Determine If Your Browser Accepts Cookies. This Cookie Contains No Personal Data And Is Discarded When You Close Your Browser.\n</div><div>When You Log In, We Will Also Set Up Several Cookies To Save Your Login Information And Your Screen Display Choices. Login Cookies Last For Two Days, And Screen Options Cookies Last For A Year. If You Select “Remember Me”, Your Login Will Persist For Two Weeks. If You Log Out Of Your Account, The Login Cookies Will Be Removed.\n</div><div>If You Edit Or Publish An Article, An Additional Cookie Will Be Saved In Your Browser. This Cookie Includes No Personal Data And Simply Indicates The Post ID Of The Article You Just Edited. It Expires After 1 Day.\n</div><div>Embedded content from other websites\n</div><div>Articles On This Site May Include Embedded Content (E.G. Videos, Images, Articles, Etc.). Embedded Content From Other Websites Behaves In The Exact Same Way As If The Visitor Has Visited The Other Website.\n</div><div>These Websites May Collect Data About You, Use Cookies, Embed Additional Third-Party Tracking, And Monitor Your Interaction With That Embedded Content, Including Tracking Your Interaction With The Embedded Content If You Have An Account And Are Logged In To That Website.\n</div><div>Who we share your data with\n</div><div>If You Request A Password Reset, Your IP Address Will Be Included In The Reset Email.\n</div><div>How long we retain your data\n</div><div>If You Leave A Comment, The Comment And Its Metadata Are Retained Indefinitely. This Is So We Can Recognize And Approve Any Follow-Up Comments Automatically Instead Of Holding Them In A Moderation Queue.\n</div><div>For Users That Register On Our Website (If Any), We Also Store The Personal Information They Provide In Their User Profile. All Users Can See, Edit, Or Delete Their Personal Information At Any Time (Except They Cannot Change Their Username). Website Administrators Can Also See And Edit That Information.\n</div><div>What rights you have over your data\n</div><div>If You Have An Account On This Site, Or Have Left Comments, You Can Request To Receive An Exported File Of The Personal Data We Hold About You, Including Any Data You Have Provided To Us. You Can Also Request That We Erase Any Personal Data We Hold About You. This Does Not Include Any Data We Are Obliged To Keep For Administrative, Legal, Or Security Purposes.\n</div><div>Where we send your data\n</div><div>Visitor Comments May Be Checked Through An Automated Spam Detection Service.</div><div>Copyright © 2022</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div></h4>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "th8qOPiJtt",
+          "_anchor": "content4-f",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".social-row": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".media-container-row": {
+              "flex-direction": "column",
+              "justify-content": "center",
+              "align-items": "center",
+              ".foot-menu": {
+                "list-style": "none",
+                "display": "flex",
+                "justify-content": "center",
+                "flex-wrap": "wrap",
+                "padding": "0",
+                "margin-bottom": "0",
+                "li": {
+                  "padding": "0 1rem 1rem 1rem",
+                  "p": {
+                    "margin": "0"
+                  }
+                }
+              },
+              ".social-list": {
+                "width": "auto",
+                "padding-left": "0",
+                "margin-bottom": "0",
+                "list-style": "none",
+                "display": "flex",
+                "flex-wrap": "wrap",
+                "justify-content": "flex-end",
+                ".mbr-iconfont-social": {
+                  "font-size": "1.5rem",
+                  "color": "#ffffff"
+                },
+                ".soc-item": {
+                  "margin": "0 .5rem"
+                },
+                "a": {
+                  "margin": "0",
+                  "opacity": ".5",
+                  "transition": ".2s linear",
+                  "&:hover": {
+                    "opacity": "1"
+                  }
+                },
+                "@media (max-width: 767px)": {
+                  "-webkit-justify-content": "center",
+                  "justify-content": "center"
+                }
+              },
+              ".row-copirayt": {
+                "word-break": "break-word",
+                "width": "100%",
+                "p": {
+                  "width": "100%"
+                }
+              }
+            }
+          },
+          "_name": "footer3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"footer3\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#232323\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"row row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\"foot-menu-item\"><a href=\"page1.html\" class=\"text-white text-primary\">Privacy Policy</a></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"page2.html\" class=\"text-white text-primary\">Terms Of Use</a></li>\n                    \n                    \n                    \n                </ul>\n            </div>\n            <div class=\"row social-row\" mbr-if=\"socialItems > 0\">\n                <div mbr-list mbr-list-grow=\"socialItems\" class=\"social-list align-right pb-2\">\n                    <div class=\"soc-item\">\n                        <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    \n                    \n                    \n                    \n                    \n                </div>\n            </div>\n            <div class=\"row row-copirayt\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\">\n                    © Copyright 2022. All Rights Reserved.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "th8ruzxC3G",
+          "_anchor": "footer3-h",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    },
+    "page2.html": {
+      "settings": {
+        "title": "Terms Of Use",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "text-align": "left"
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"7\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">\n                    <b>Terms Of Use</b></h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\">Certain Features Of The Site May Be Subject To Additional Guidelines, Terms, Or Rules, Which Will Be Posted On The Site In Connection With Such Features.\n<div>\n</div><div>All Such Additional Terms, Guidelines, And Rules Are Incorporated By Reference Into These Terms.\n</div><div>These Terms Of Use Described The Legally Binding Terms And Conditions That Oversee Your Use Of The Site. BY LOGGING INTO THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS And You Represent That You Have The Authority And Capacity To Enter Into These Terms. YOU SHOULD BE AT LEAST 18 YEARS OF AGE TO ACCESS THE SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO NOT LOG INTO AND/OR USE THE SITE.\n</div><div>These Terms Require The Use Of Arbitration Section 10.2 On An Individual Basis To Resolve Disputes And Also Limit The Remedies Available To You In The Event Of A Dispute. These Terms Of Use Were Created With The Help Of The Terms Of Use Generator.\n</div><div>Access to the Site\n</div><div>Subject To These Terms. Company Grants You A Non-Transferable, Non-Exclusive, Revocable, Limited License To Access The Site Solely For Your Own Personal, Noncommercial Use.\n</div><div>Certain Restrictions. The Rights Approved To You In These Terms Are Subject To The Following Restrictions: (A) You Shall Not Sell, Rent, Lease, Transfer, Assign, Distribute, Host, Or Otherwise Commercially Exploit The Site; (B) You Shall Not Change, Make Derivative Works Of, Disassemble, Reverse Compile Or Reverse Engineer Any Part Of The Site; (C) You Shall Not Access The Site In Order To Build A Similar Or Competitive Website; And (D) Except As Expressly Stated Herein, No Part Of The Site May Be Copied, Reproduced, Distributed, Republished, Downloaded, Displayed, Posted Or Transmitted In Any Form Or By Any Means Unless Otherwise Indicated, Any Future Release, Update, Or Other Addition To Functionality Of The Site Shall Be Subject To These Terms.  All Copyright And Other Proprietary Notices On The Site Must Be Retained On All Copies Thereof.\n</div><div>Company Reserves The Right To Change, Suspend, Or Cease The Site With Or Without Notice To You.  You Approved That Company Will Not Be Held Liable To You Or Any Third-Party For Any Change, Interruption, Or Termination Of The Site Or Any Part.\n</div><div>No Support Or Maintenance. You Agree That Company Will Have No Obligation To Provide You With Any Support In Connection With The Site.\n</div><div>Excluding Any User Content That You May Provide, You Are Aware That All The Intellectual Property Rights, Including Copyrights, Patents, Trademarks, And Trade Secrets, In The Site And Its Content Are Owned By Company Or Company’s Suppliers. Note That These Terms And Access To The Site Do Not Give You Any Rights, Title Or Interest In Or To Any Intellectual Property Rights, Except For The Limited Access Rights Expressed In Section 2.1. Company And Its Suppliers Reserve All Rights Not Granted In These Terms.\n</div><div>Third-Party Links &amp; Ads; Other Users\n</div><div>Third-Party Links &amp; Ads. The Site May Contain Links To Third-Party Websites And Services, And/Or Display Advertisements For Third-Parties.  Such Third-Party Links &amp; Ads Are Not Under The Control Of Company, And Company Is Not Responsible For Any Third-Party Links &amp; Ads.  Company Provides Access To These Third-Party Links &amp; Ads Only As A Convenience To You, And Does Not Review, Approve, Monitor, Endorse, Warrant, Or Make Any Representations With Respect To Third-Party Links &amp; Ads.  You Use All Third-Party Links &amp; Ads At Your Own Risk, And Should Apply A Suitable Level Of Caution And Discretion In Doing So. When You Click On Any Of The Third-Party Links &amp; Ads, The Applicable Third Party’s Terms And Policies Apply, Including The Third Party’s Privacy And Data Gathering Practices.\n</div><div>Other Users. Each Site User Is Solely Responsible For Any And All Of Its Own User Content.  Because We Do Not Control User Content, You Acknowledge And Agree That We Are Not Responsible For Any User Content, Whether Provided By You Or By Others.  You Agree That Company Will Not Be Responsible For Any Loss Or Damage Incurred As The Result Of Any Such Interactions.  If There Is A Dispute Between You And Any Site User, We Are Under No Obligation To Become Involved.\n</div><div>You Hereby Release And Forever Discharge The Company And Our Officers, Employees, Agents, Successors, And Assigns From, And Hereby Waive And Relinquish, Each And Every Past, Present And Future Dispute, Claim, Controversy, Demand, Right, Obligation, Liability, Action And Cause Of Action Of Every Kind And Nature, That Has Arisen Or Arises Directly Or Indirectly Out Of, Or That Relates Directly Or Indirectly To, The Site. If You Are A California Resident, You Hereby Waive California Civil Code Section 1542 In Connection With The Foregoing, Which States: “A General Release Does Not Extend To Claims Which The Creditor Does Not Know Or Suspect To Exist In His Or Her Favor At The Time Of Executing The Release, Which If Known By Him Or Her Must Have Materially Affected His Or Her Settlement With The Debtor.”\n</div><div>Cookies And Web Beacons. Like Any Other Website, All Get Discount Uses ‘Cookies’. These Cookies Are Used To Store Information Including Visitors’ Preferences, And The Pages On The Website That The Visitor Accessed Or Visited. The Information Is Used To Optimize The Users’ Experience By Customizing Our Web Page Content Based On Visitors’ Browser Type And/Or Other Information.\n</div><div>Google DoubleClick DART Cookie. Google Is One Of A Third-Party Vendor On Our Site. It Also Uses Cookies, Known As DART Cookies, To Serve Ads To Our Site Visitors Based Upon Their Visit To Www.Website.Com And Other Sites On The Internet. However, Visitors May Choose To Decline The Use Of DART Cookies By Visiting The Google Ad And Content Network Privacy Policy At The Following URL – Https://Policies.Google.Com/Technologies/Ads\n</div><div>Our Advertising Partners. Some Of Advertisers On Our Site May Use Cookies And Web Beacons. Our Advertising Partners Are Listed Below. Each Of Our Advertising Partners Has Their Own Privacy Policy For Their Policies On User Data. For Easier Access, We Hyperlinked To Their Privacy Policies Below.\n</div><div>Google Https://Policies.Google.Com/Technologies/Ads\n</div><div>Disclaimers\n</div><div>The Site Is Provided On An “As-Is” And “As Available” Basis, And Company And Our Suppliers Expressly Disclaim Any And All Warranties And Conditions Of Any Kind, Whether Express, Implied, Or Statutory, Including All Warranties Or Conditions Of Merchantability, Fitness For A Particular Purpose, Title, Quiet Enjoyment, Accuracy, Or Non-Infringement.  We And Our Suppliers Make Not Guarantee That The Site Will Meet Your Requirements, Will Be Available On An Uninterrupted, Timely, Secure, Or Error-Free Basis, Or Will Be Accurate, Reliable, Free Of Viruses Or Other Harmful Code, Complete, Legal, Or Safe.  If Applicable Law Requires Any Warranties With Respect To The Site, All Such Warranties Are Limited In Duration To Ninety (90) Days From The Date Of First Use.\n</div><div>Some Jurisdictions Do Not Allow The Exclusion Of Implied Warranties, So The Above Exclusion May Not Apply To You.  Some Jurisdictions Do Not Allow Limitations On How Long An Implied Warranty Lasts, So The Above Limitation May Not Apply To You.\n</div><div>Limitation on Liability\n</div><div>To The Maximum Extent Permitted By Law, In No Event Shall Company Or Our Suppliers Be Liable To You Or Any Third-Party For Any Lost Profits, Lost Data, Costs Of Procurement Of Substitute Products, Or Any Indirect, Consequential, Exemplary, Incidental, Special Or Punitive Damages Arising From Or Relating To These Terms Or Your Use Of, Or Incapability To Use The Site Even If Company Has Been Advised Of The Possibility Of Such Damages.  Access To And Use Of The Site Is At Your Own Discretion And Risk, And You Will Be Solely Responsible For Any Damage To Your Device Or Computer System, Or Loss Of Data Resulting Therefrom.\n</div><div>To The Maximum Extent Permitted By Law, Notwithstanding Anything To The Contrary Contained Herein, Our Liability To You For Any Damages Arising From Or Related To This Agreement, Will At All Times Be Limited To A Maximum Of Fifty U.S. Dollars (U.S. $50). The Existence Of More Than One Claim Will Not Enlarge This Limit.  You Agree That Our Suppliers Will Have No Liability Of Any Kind Arising From Or Relating To This Agreement.\n</div><div>Some Jurisdictions Do Not Allow The Limitation Or Exclusion Of Liability For Incidental Or Consequential Damages, So The Above Limitation Or Exclusion May Not Apply To You.\n</div><div>Term And Termination. Subject To This Section, These Terms Will Remain In Full Force And Effect While You Use The Site.  We May Suspend Or Terminate Your Rights To Use The Site At Any Time For Any Reason At Our Sole Discretion, Including For Any Use Of The Site In Violation Of These Terms.  Upon Termination Of Your Rights Under These Terms, Your Account And Right To Access And Use The Site Will Terminate Immediately.  You Understand That Any Termination Of Your Account May Involve Deletion Of Your User Content Associated With Your Account From Our Live Databases.  Company Will Not Have Any Liability Whatsoever To You For Any Termination Of Your Rights Under These Terms.  Even After Your Rights Under These Terms Are Terminated, The Following Provisions Of These Terms Will Remain In Effect: Sections 2 Through 2.5, Section 3 And Sections 4 Through 10.\n</div><div>Copyright Policy.\n</div><div>Company Respects The Intellectual Property Of Others And Asks That Users Of Our Site Do The Same.  In Connection With Our Site, We Have Adopted And Implemented A Policy Respecting Copyright Law That Provides For The Removal Of Any Infringing Materials And For The Termination Of Users Of Our Online Site Who Are Repeated Infringers Of Intellectual Property Rights, Including Copyrights.  If You Believe That One Of Our Users Is, Through The Use Of Our Site, Unlawfully Infringing The Copyright(S) In A Work, And Wish To Have The Allegedly Infringing Material Removed, The Following Information In The Form Of A Written Notification (Pursuant To 17 U.S.C. § 512(C)) Must Be Provided To Our Designated Copyright Agent:\n</div><div>Your Physical Or Electronic Signature;\n</div><div>Identification Of The Copyrighted Work(S) That You Claim To Have Been Infringed;\n</div><div>Identification Of The Material On Our Services That You Claim Is Infringing And That You Request Us To Remove;\n</div><div>Sufficient Information To Permit Us To Locate Such Material;\n</div><div>Your Address, Telephone Number, And E-Mail Address;\n</div><div>A Statement That You Have A Good Faith Belief That Use Of The Objectionable Material Is Not Authorized By The Copyright Owner, Its Agent, Or Under The Law; And\n</div><div>A Statement That The Information In The Notification Is Accurate, And Under Penalty Of Perjury, That You Are Either The Owner Of The Copyright That Has Allegedly Been Infringed Or That You Are Authorized To Act On Behalf Of The Copyright Owner.\n</div><div>Please Note That, Pursuant To 17 U.S.C. § 512(F), Any Misrepresentation Of Material Fact In A Written Notification Automatically Subjects The Complaining Party To Liability For Any Damages, Costs And Attorney’s Fees Incurred By Us In Connection With The Written Notification And Allegation Of Copyright Infringement.\n</div><div>General\n</div><div>These Terms Are Subject To Occasional Revision, And If We Make Any Substantial Changes, We May Notify You By Sending You An E-Mail To The Last E-Mail Address You Provided To Us And/Or By Prominently Posting Notice Of The Changes On Our Site.  You Are Responsible For Providing Us With Your Most Current E-Mail Address.  In The Event That The Last E-Mail Address That You Have Provided Us Is Not Valid Our Dispatch Of The E-Mail Containing Such Notice Will Nonetheless Constitute Effective Notice Of The Changes Described In The Notice.  Any Changes To These Terms Will Be Effective Upon The Earliest Of Thirty (30) Calendar Days Following Our Dispatch Of An E-Mail Notice To You Or Thirty (30) Calendar Days Following Our Posting Of Notice Of The Changes On Our Site.  These Changes Will Be Effective Immediately For New Users Of Our Site.  Continued Use Of Our Site Following Notice Of Such Changes Shall Indicate Your Acknowledgement Of Such Changes And Agreement To Be Bound By The Terms And Conditions Of Such Changes. Dispute Resolution. Please Read This Arbitration Agreement Carefully. It Is Part Of Your Contract With Company And Affects Your Rights.  It Contains Procedures For MANDATORY BINDING ARBITRATION AND A CLASS ACTION WAIVER.\n</div><div>Applicability Of Arbitration Agreement. All Claims And Disputes In Connection With The Terms Or The Use Of Any Product Or Service Provided By The Company That Cannot Be Resolved Informally Or In Small Claims Court Shall Be Resolved By Binding Arbitration On An Individual Basis Under The Terms Of This Arbitration Agreement.  Unless Otherwise Agreed To, All Arbitration Proceedings Shall Be Held In English.  This Arbitration Agreement Applies To You And The Company, And To Any Subsidiaries, Affiliates, Agents, Employees, Predecessors In Interest, Successors, And Assigns, As Well As All Authorized Or Unauthorized Users Or Beneficiaries Of Services Or Goods Provided Under The Terms.\n</div><div>Notice Requirement And Informal Dispute Resolution. Before Either Party May Seek Arbitration, The Party Must First Send To The Other Party A Written Notice Of Dispute Describing The Nature And Basis Of The Claim Or Dispute, And The Requested Relief.  A Notice To The Company Should Be Sent To: Rio De Janeiro. After The Notice Is Received, You And The Company May Attempt To Resolve The Claim Or Dispute Informally.  If You And The Company Do Not Resolve The Claim Or Dispute Within Thirty (30) Days After The Notice Is Received, Either Party May Begin An Arbitration Proceeding.  The Amount Of Any Settlement Offer Made By Any Party May Not Be Disclosed To The Arbitrator Until After The Arbitrator Has Determined The Amount Of The Award To Which Either Party Is Entitled.\n</div><div>Arbitration Rules. Arbitration Shall Be Initiated Through The American Arbitration Association, An Established Alternative Dispute Resolution Provider That Offers Arbitration As Set Forth In This Section.  If AAA Is Not Available To Arbitrate, The Parties Shall Agree To Select An Alternative ADR Provider.  The Rules Of The ADR Provider Shall Govern All Aspects Of The Arbitration Except To The Extent Such Rules Are In Conflict With The Terms.  The AAA Consumer Arbitration Rules Governing The Arbitration Are Available Online At Adr.Org Or By Calling The AAA At 1-800-778-7879.  The Arbitration Shall Be Conducted By A Single, Neutral Arbitrator.  Any Claims Or Disputes Where The Total Amount Of The Award Sought Is Less Than Ten Thousand U.S. Dollars (US $10,000.00) May Be Resolved Through Binding Non-Appearance-Based Arbitration, At The Option Of The Party Seeking Relief.  For Claims Or Disputes Where The Total Amount Of The Award Sought Is Ten Thousand U.S. Dollars (US $10,000.00) Or More, The Right To A Hearing Will Be Determined By The Arbitration Rules.  Any Hearing Will Be Held In A Location Within 100 Miles Of Your Residence, Unless You Reside Outside Of The United States, And Unless The Parties Agree Otherwise.  If You Reside Outside Of The U.S., The Arbitrator Shall Give The Parties Reasonable Notice Of The Date, Time And Place Of Any Oral Hearings. Any Judgment On The Award Rendered By The Arbitrator May Be Entered In Any Court Of Competent Jurisdiction.  If The Arbitrator Grants You An Award That Is Greater Than The Last Settlement Offer That The Company Made To You Prior To The Initiation Of Arbitration, The Company Will Pay You The Greater Of The Award Or $2,500.00.  Each Party Shall Bear Its Own Costs And Disbursements Arising Out Of The Arbitration And Shall Pay An Equal Share Of The Fees And Costs Of The ADR Provider.\n</div><div>Additional Rules For Non-Appearance Based Arbitration. If Non-Appearance Based Arbitration Is Elected, The Arbitration Shall Be Conducted By Telephone, Online And/Or Based Solely On Written Submissions; The Specific Manner Shall Be Chosen By The Party Initiating The Arbitration.  The Arbitration Shall Not Involve Any Personal Appearance By The Parties Or Witnesses Unless Otherwise Agreed By The Parties.\n</div><div>Time Limits. If You Or The Company Pursues Arbitration, The Arbitration Action Must Be Initiated And/Or Demanded Within The Statute Of Limitations And Within Any Deadline Imposed Under The AAA Rules For The Pertinent Claim.\n</div><div>Authority Of Arbitrator. If Arbitration Is Initiated, The Arbitrator Will Decide The Rights And Liabilities Of You And The Company, And The Dispute Will Not Be Consolidated With Any Other Matters Or Joined With Any Other Cases Or Parties.  The Arbitrator Shall Have The Authority To Grant Motions Dispositive Of All Or Part Of Any Claim.  The Arbitrator Shall Have The Authority To Award Monetary Damages, And To Grant Any Non-Monetary Remedy Or Relief Available To An Individual Under Applicable Law, The AAA Rules, And The Terms.  The Arbitrator Shall Issue A Written Award And Statement Of Decision Describing The Essential Findings And Conclusions On Which The Award Is Based.  The Arbitrator Has The Same Authority To Award Relief On An Individual Basis That A Judge In A Court Of Law Would Have.  The Award Of The Arbitrator Is Final And Binding Upon You And The Company.\n</div><div>Waiver Of Jury Trial. THE PARTIES HEREBY WAIVE THEIR CONSTITUTIONAL AND STATUTORY RIGHTS TO GO TO COURT AND HAVE A TRIAL IN FRONT OF A JUDGE OR A JURY, Instead Electing That All Claims And Disputes Shall Be Resolved By Arbitration Under This Arbitration Agreement.  Arbitration Procedures Are Typically More Limited, More Efficient And Less Expensive Than Rules Applicable In A Court And Are Subject To Very Limited Review By A Court.  In The Event Any Litigation Should Arise Between You And The Company In Any State Or Federal Court In A Suit To Vacate Or Enforce An Arbitration Award Or Otherwise, YOU AND THE COMPANY WAIVE ALL RIGHTS TO A JURY TRIAL, Instead Electing That The Dispute Be Resolved By A Judge.\n</div><div>Waiver Of Class Or Consolidated Actions. All Claims And Disputes Within The Scope Of This Arbitration Agreement Must Be Arbitrated Or Litigated On An Individual Basis And Not On A Class Basis, And Claims Of More Than One Customer Or User Cannot Be Arbitrated Or Litigated Jointly Or Consolidated With Those Of Any Other Customer Or User.\n</div><div>Confidentiality. All Aspects Of The Arbitration Proceeding Shall Be Strictly Confidential.  The Parties Agree To Maintain Confidentiality Unless Otherwise Required By Law.  This Paragraph Shall Not Prevent A Party From Submitting To A Court Of Law Any Information Necessary To Enforce This Agreement, To Enforce An Arbitration Award, Or To Seek Injunctive Or Equitable Relief.\n</div><div>Severability. If Any Part Or Parts Of This Arbitration Agreement Are Found Under The Law To Be Invalid Or Unenforceable By A Court Of Competent Jurisdiction, Then Such Specific Part Or Parts Shall Be Of No Force And Effect And Shall Be Severed And The Remainder Of The Agreement Shall Continue In Full Force And Effect.\n</div><div>Right To Waive. Any Or All Of The Rights And Limitations Set Forth In This Arbitration Agreement May Be Waived By The Party Against Whom The Claim Is Asserted.  Such Waiver Shall Not Waive Or Affect Any Other Portion Of This Arbitration Agreement.\n</div><div>Survival Of Agreement. This Arbitration Agreement Will Survive The Termination Of Your Relationship With Company.\n</div><div>Small Claims Court. Nonetheless The Foregoing, Either You Or The Company May Bring An Individual Action In Small Claims Court.\n</div><div>Emergency Equitable Relief. Anyhow The Foregoing, Either Party May Seek Emergency Equitable Relief Before A State Or Federal Court In Order To Maintain The Status Quo Pending Arbitration.  A Request For Interim Measures Shall Not Be Deemed A Waiver Of Any Other Rights Or Obligations Under This Arbitration Agreement.\n</div><div>Claims Not Subject To Arbitration. Notwithstanding The Foregoing, Claims Of Defamation, Violation Of The Computer Fraud And Abuse Act, And Infringement Or Misappropriation Of The Other Party’s Patent, Copyright, Trademark Or Trade Secrets Shall Not Be Subject To This Arbitration Agreement.\n</div><div>In Any Circumstances Where The Foregoing Arbitration Agreement Permits The Parties To Litigate In Court, The Parties Hereby Agree To Submit To The Personal Jurisdiction Of The Courts Located Within Netherlands County, California, For Such Purposes.\n</div><div>The Site May Be Subject To U.S. Export Control Laws And May Be Subject To Export Or Import Regulations In Other Countries. You Agree Not To Export, Re-Export, Or Transfer, Directly Or Indirectly, Any U.S. Technical Data Acquired From Company, Or Any Products Utilizing Such Data, In Violation Of The United States Export Laws Or Regulations.\n</div><div>Company Is Located At The Address In Section 10.8. If You Are A California Resident, You May Report Complaints To The Complaint Assistance Unit Of The Division Of Consumer Product Of The California Department Of Consumer Affairs By Contacting Them In Writing At 400 R Street, Sacramento, CA 95814, Or By Telephone At (800) 952-5210.\n</div><div>Electronic Communications. The Communications Between You And Company Use Electronic Means, Whether You Use The Site Or Send Us Emails, Or Whether Company Posts Notices On The Site Or Communicates With You Via Email. For Contractual Purposes, You (A) Consent To Receive Communications From Company In An Electronic Form; And (B) Agree That All Terms And Conditions, Agreements, Notices, Disclosures, And Other Communications That Company Provides To You Electronically Satisfy Any Legal Obligation That Such Communications Would Satisfy If It Were Be In A Hard Copy Writing.\n</div><div>Entire Terms. These Terms Constitute The Entire Agreement Between You And Us Regarding The Use Of The Site. Our Failure To Exercise Or Enforce Any Right Or Provision Of These Terms Shall Not Operate As A Waiver Of Such Right Or Provision. The Section Titles In These Terms Are For Convenience Only And Have No Legal Or Contractual Effect. The Word “Including” Means “Including Without Limitation”. If Any Provision Of These Terms Is Held To Be Invalid Or Unenforceable, The Other Provisions Of These Terms Will Be Unimpaired And The Invalid Or Unenforceable Provision Will Be Deemed Modified So That It Is Valid And Enforceable To The Maximum Extent Permitted By Law.  Your Relationship To Company Is That Of An Independent Contractor, And Neither Party Is An Agent Or Partner Of The Other.  These Terms, And Your Rights And Obligations Herein, May Not Be Assigned, Subcontracted, Delegated, Or Otherwise Transferred By You Without Company’s Prior Written Consent, And Any Attempted Assignment, Subcontract, Delegation, Or Transfer In Violation Of The Foregoing Will Be Null And Void.  Company May Freely Assign These Terms.  The Terms And Conditions Set Forth In These Terms Shall Be Binding Upon Assignees.\n</div><div>Your Privacy. Please Read Our Privacy Policy.\n</div><div>Copyright/Trademark Information. Copyright ©. All Rights Reserved.  All Trademarks, Logos And Service Marks Displayed On The Site Are Our Property Or The Property Of Other Third-Parties. You Are Not Permitted To Use These Marks Without Our Prior Written Consent Or The Consent Of Such Third Party Which May Own The Marks.</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div><div>\n</div></h4>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "th8sEleL3s",
+          "_anchor": "content4-j",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".social-row": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".media-container-row": {
+              "flex-direction": "column",
+              "justify-content": "center",
+              "align-items": "center",
+              ".foot-menu": {
+                "list-style": "none",
+                "display": "flex",
+                "justify-content": "center",
+                "flex-wrap": "wrap",
+                "padding": "0",
+                "margin-bottom": "0",
+                "li": {
+                  "padding": "0 1rem 1rem 1rem",
+                  "p": {
+                    "margin": "0"
+                  }
+                }
+              },
+              ".social-list": {
+                "width": "auto",
+                "padding-left": "0",
+                "margin-bottom": "0",
+                "list-style": "none",
+                "display": "flex",
+                "flex-wrap": "wrap",
+                "justify-content": "flex-end",
+                ".mbr-iconfont-social": {
+                  "font-size": "1.5rem",
+                  "color": "#ffffff"
+                },
+                ".soc-item": {
+                  "margin": "0 .5rem"
+                },
+                "a": {
+                  "margin": "0",
+                  "opacity": ".5",
+                  "transition": ".2s linear",
+                  "&:hover": {
+                    "opacity": "1"
+                  }
+                },
+                "@media (max-width: 767px)": {
+                  "-webkit-justify-content": "center",
+                  "justify-content": "center"
+                }
+              },
+              ".row-copirayt": {
+                "word-break": "break-word",
+                "width": "100%",
+                "p": {
+                  "width": "100%"
+                }
+              }
+            }
+          },
+          "_name": "footer3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"footer3\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#232323\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"row row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\"foot-menu-item\"><a href=\"page1.html\" class=\"text-white text-primary\">Privacy Policy</a></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"page2.html\" class=\"text-white text-primary\">Terms Of Use</a></li>\n                    \n                    \n                    \n                </ul>\n            </div>\n            <div class=\"row social-row\" mbr-if=\"socialItems > 0\">\n                <div mbr-list mbr-list-grow=\"socialItems\" class=\"social-list align-right pb-2\">\n                    <div class=\"soc-item\">\n                        <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    \n                    \n                    \n                    \n                    \n                </div>\n            </div>\n            <div class=\"row row-copirayt\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\">\n                    © Copyright 2022. All Rights Reserved.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "th8ruzxC3G",
+          "_anchor": "footer3-i",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
